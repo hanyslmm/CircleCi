@@ -5,13 +5,14 @@ jobs:
       - image: circleci/python 
     steps:
       - checkout
-      - run: print ("A first hello")
+      - run: echo "A first hello"
       - run: sleep 25
   two:
     docker:
       - image: circleci/python
     steps:
       - checkout
+      - run: python
       - run: print ("A more familiar hi")
       - run: sleep 15
 workflows:
